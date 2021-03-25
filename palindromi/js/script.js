@@ -6,27 +6,32 @@
 var parolaUtente = prompt('inserisci qui la parola da verificare : ');
 console.log(parolaUtente);
 
+var parolaDaComparare = getPalindrome(parolaUtente);
 
-for ( var i = 0; i < parolaUtente.length; i++) {
-    var parolaSeparataOrd = parolaUtente[i];
-    console.log(parolaSeparataOrd);
-}
-
-
-for ( var i = parolaUtente.length -1; i >= 0; i--) {
-    var parolaSeparataDis = parolaUtente[i];
-    console.log(parolaUtente[i]);
+if (parolaDaComparare == parolaUtente) {
+    alert("La parola inserita è palindroma!");
+} else {
+    alert("La parola inserita non è palindroma");
 }
 
 
 function getPalindrome (parolaDaValutare) {
-    
-    var parolaValutata = 
 
-    
-    
+    var parolaValutata = "";
+
+    for ( var i = parolaDaValutare.length - 1; i >= 0; i--) {
+
+        parolaValutata = parolaValutata + parolaDaValutare[i];
+    }
+
+    console.log(parolaValutata);
+
+
     return parolaValutata;
 }
+
+
+
 
 
 
